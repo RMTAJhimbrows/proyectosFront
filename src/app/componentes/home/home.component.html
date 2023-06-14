@@ -1,0 +1,10 @@
+<div *ngIf="info.token; else loggedOut">
+    <div class="container">
+        <p>Tu nombre de usuario: <strong>{{info.nombreUsuario}}</strong></p>
+        <p>Este es el token: <strong>{{info.token}}</strong></p>
+        <p>Tus privilegios: <strong>{{info.authorities}}</strong></p>
+    </div>
+</div>
+<ng-template #loggedOut>
+    <div class="container">NO HAS INICIADO SESION ¡COÑO!</div>
+</ng-template>
